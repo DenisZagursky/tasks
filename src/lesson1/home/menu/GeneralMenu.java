@@ -1,4 +1,7 @@
 package lesson1.home.menu;
+
+import lesson1.home.utils.Reader;
+
 public class GeneralMenu implements Menu {
     @Override
       public void printMenu() {
@@ -25,6 +28,7 @@ public class GeneralMenu implements Menu {
                     printMassMenu.run();
                     break;
                 case 3:
+                    Reader.getIn().close();
                     return;
                 default:
                     System.out.println("такого пункта не существует");

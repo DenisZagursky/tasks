@@ -1,5 +1,7 @@
 package lesson1.home.menu;
 
+import lesson1.home.utils.Reader;
+
 import java.util.Scanner;
 
 /**
@@ -9,5 +11,5 @@ public interface Menu {
    
     void printMenu();
     public void run();
-    Scanner in = new Scanner(System.in);
+    Scanner in = Reader.getIn();
 }

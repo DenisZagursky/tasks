@@ -1,6 +1,8 @@
 package lesson1.home.general;
 
+import com.sun.org.apache.regexp.internal.RE;
 import lesson1.home.menu.SearchMenu;
+import lesson1.home.utils.Reader;
 import lesson1.home.utils.UtilElements;
 import lesson1.home.utils.UtilSearch;
 
@@ -9,12 +11,12 @@ import java.util.Scanner;
 
 public class Mass {
     static private int[] mass;
-    private  static Scanner in = new Scanner(System.in);
 
-    public Mass() {
+
+    public  static void createMass() {
         while (true){
         System.out.println("Введите размер массива:");
-        int razmer=in.nextInt();
+        int razmer=Reader.getIn().nextInt();
         if ((razmer>0) &&(razmer<11))
         {
             mass=new int[razmer];
@@ -41,7 +43,8 @@ public class Mass {
     {   System.out.println("Ведите значения:");
         boolean havezero=false;
         for(int i=0;i < mass.length; i++){
-            int element=in.nextInt();
+
+            int element=Reader.getIn().nextInt();
             if ((element==0) &&(havezero==false))
             {
                 mass[i]=element;

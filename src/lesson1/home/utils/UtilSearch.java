@@ -6,19 +6,25 @@ import java.util.Scanner;
  * Created by Dzenyaa on 09.10.2017.
  */
 public class UtilSearch implements Utils {
-    private Scanner in = new Scanner(System.in);
-        public void searchElement()
+
+        private  Boolean haveElement(int element)
         {
-            System.out.println("Введите число для поиска");
-            int element=in.nextInt();
             for (int i=0;i<obj.length;i++)
             {
                 if (element==obj[i])
                 {
-                    System.out.print("Элемент найден. Его порядковый номер:");
-                    System.out.println(++i);
-                    return;
+                    return true;
                 }
+            }
+            return false;
+        }
+        public void searchElement()
+        {
+            System.out.println("Введите число для поиска");
+            int element=Reader.getIn().nextInt();
+            if(haveElement(element)) {
+                System.out.println("Элемент найден.");
+                return;
             }
             System.out.println("Данный элемент не найден");
         }
@@ -26,14 +32,19 @@ public class UtilSearch implements Utils {
         {
 
             System.out.println("Введите номер элемента, который хотите изменить:");
-            int position=in.nextInt();
-            if ((position>obj.length)||(position<1))
+            int position=Reader.getIn().nextInt();
+            if ((position>obj.length)||(position<1) )
             {
                 System.out.println("Выход за пределы массива");
                 return;
             }
             System.out.println("Введите новое значение:");
-            int value=in.nextInt();
-            obj[position-1]=value;
+            int value=Reader.getIn().nextInt();
+            if(haveElement(value))
+            {
+                System.out.println("Данное значение уже присутствует в массиве");
+                return;
+            } else
+            {obj[position-1]=value;}
         }
 }
