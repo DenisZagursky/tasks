@@ -38,17 +38,16 @@ public class Mass {
         }
         return false;
     }
-
     static void fillMass()
     {   System.out.println("Ведите значения:");
-        boolean havezero=false;
+        boolean haveZero=false;
         for(int i=0;i < mass.length; i++){
 
             int element=Reader.getIn().nextInt();
-            if ((element==0) &&(havezero==false))
+            if ((element==0) &&(haveZero==false))
             {
                 mass[i]=element;
-                havezero=true;
+                haveZero=true;
             } else
             if ((searchElemnt(element)) )
             {
