@@ -20,11 +20,8 @@ public class CarMapTest implements Testable {
     @Override
     public void test() {
         putValuesToMap(array);
-        chekPattern(map);
-        addNumberForName(map);
-        chekPattern(map);
         printMapEntries(map);
-
+        doubleFilter(map);
 
 
     }
@@ -161,7 +158,29 @@ public class CarMapTest implements Testable {
         System.out.println("2 element dont exist");
     }
     private void doubleFilter(Map<String,Car> map)
-    {
+    {       List<Car> list=new ArrayList<>(map.values());
+            System.out.println("Sorted array:");
+            Collections.sort(list, new Comparator<Car>() {
+                @Override
+                public int compare(Car o1, Car o2) {
+
+                    int key=o1.getSpeed().compareTo(o2.getSpeed());
+                    if (key==0)
+                    {
+                        return o1.getWeight().compareTo(o2.getWeight());
+                    }
+                    else
+                    {
+                        return key;
+                    }
+                }
+            });
+            for (int i=0;i<map.size();i++)
+            {
+                System.out.println(map.get(list.get(i).getName()).toString());
+            }
+
+
 
 
     }

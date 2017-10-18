@@ -1,0 +1,8 @@
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
+.idea/workspace.xml
+out/
+src/lesson1/result.jar
+src/lesson2/home/
+src/META-INF/
+task1.iml
