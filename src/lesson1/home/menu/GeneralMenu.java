@@ -4,7 +4,7 @@ import lesson1.home.utils.Reader;
 
 public class GeneralMenu implements Menu {
     @Override
-      public void printMenu() {
+    public void printMenu() {
         System.out.println("---");
         System.out.println("1. Операции");
         System.out.println("2. Печать");
@@ -14,9 +14,9 @@ public class GeneralMenu implements Menu {
 
     @Override
     public void run() {
-        TypeOperationMenu typeOperationMenu=new TypeOperationMenu();
-        PrintMassMenu printMassMenu=new PrintMassMenu();
-        while(true) {
+        TypeOperationMenu typeOperationMenu = new TypeOperationMenu();
+        PrintMassMenu printMassMenu = new PrintMassMenu();
+        while (true) {
             printMenu();
             int choice = in.nextInt();
 

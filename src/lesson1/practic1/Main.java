@@ -3,16 +3,16 @@ package lesson1.practic1;
 public class Main {
     public static void main(String[] args) {
 
-        Games mobaGames=new MobaGames();
+        Games mobaGames = new MobaGames();
         mobaGames.play();
-        Games mmoGames=new MmoGames();
+        Games mmoGames = new MmoGames();
         mmoGames.play();
 
-        MobaGames mobaGamesTest=new MobaGames();
+        MobaGames mobaGamesTest = new MobaGames();
         mobaGamesTest.play();
         mobaGamesTest.clear();
 
-       System.out.println(mobaGamesTest.getTimeInGame());
+        System.out.println(mobaGamesTest.getTimeInGame());
 
     }
 }

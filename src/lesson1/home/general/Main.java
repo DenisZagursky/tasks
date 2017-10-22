@@ -7,8 +7,8 @@ public class Main {
     public static void main(String[] args) {
         Mass.createMass();
         Mass.fillMass();
-        GeneralMenu generalMenu=new GeneralMenu();
-            generalMenu.run();
+        GeneralMenu generalMenu = new GeneralMenu();
+        generalMenu.run();
 
 
     }

@@ -6,16 +6,14 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-/**
- * Created by Dzenyaa on 13.10.2017.
- */
 public class CarSetTest implements Testable {
-    private Car[] array={new Car(1,"Opel", 2.45, 150),
-                            new Car(2,"Wv",5.67,145),
-                            new Car(3,"ferrari",3.44,180),
-                            new Car(1,"Opel",2.45,150),
-                            new Car(4,"Tesla",2.44,165),};
-    private Set<Car> set=new HashSet();
+    private Car[] array = {new Car(1, "Opel", 2.45, 150),
+            new Car(2, "Wv", 5.67, 145),
+            new Car(3, "ferrari", 3.44, 180),
+            new Car(1, "Opel", 2.45, 150),
+            new Car(4, "Tesla", 2.44, 165),};
+    private Set<Car> set = new HashSet();
+
     @Override
     public void test() {
         putValuesToSet(array);
@@ -24,10 +22,11 @@ public class CarSetTest implements Testable {
     }
 
     private void printSetEntries(Set<Car> set) {
-        for (Car entry:set)
-        {System.out.println("Entry:"+ entry);}
-        System.out.println("Array length:"+ array.length);
-        System.out.println("Array length:"+set.size());
+        for (Car entry : set) {
+            System.out.println("Entry:" + entry);
+        }
+        System.out.println("Array length:" + array.length);
+        System.out.println("Array length:" + set.size());
     }
 
     private void putValuesToSet(Car[] array) {

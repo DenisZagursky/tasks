@@ -1,8 +1,6 @@
 package lesson2.practic.object;
 
-/**
- * Created by Dzenyaa on 13.10.2017.
- */
+
 public class Car {
     private Integer id;
     private String name;
@@ -20,16 +18,32 @@ public class Car {
         return id;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public Double getWeight() {
         return weight;
     }
 
+    public void setWeight(Double weight) {
+        this.weight = weight;
+    }
+
     public Integer getSpeed() {
         return speed;
+    }
+
+    public void setSpeed(Integer speed) {
+        this.speed = speed;
     }
 
     @Override
@@ -52,22 +66,6 @@ public class Car {
         result = 31 * result + (weight != null ? weight.hashCode() : 0);
         result = 31 * result + (speed != null ? speed.hashCode() : 0);
         return result;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setWeight(Double weight) {
-        this.weight = weight;
-    }
-
-    public void setSpeed(Integer speed) {
-        this.speed = speed;
     }
 
     @Override

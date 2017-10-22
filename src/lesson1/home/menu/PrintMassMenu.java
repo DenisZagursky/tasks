@@ -16,7 +16,6 @@ public class PrintMassMenu implements Menu {
         System.out.println("Выберите значение...");
 
 
-
     }
 
     @Override
@@ -24,7 +23,7 @@ public class PrintMassMenu implements Menu {
         while (true) {
             printMenu();
             int choice = in.nextInt();
-            UtilPrint utilPrint=new UtilPrint();
+            UtilPrint utilPrint = new UtilPrint();
             switch (choice) {
                 case 1:
                     utilPrint.printNormal();

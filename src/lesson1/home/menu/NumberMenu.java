@@ -5,7 +5,7 @@ import lesson1.home.utils.UtilElements;
 /**
  * Created by Dzenyaa on 09.10.2017.
  */
-public class NumberMenu implements Menu{
+public class NumberMenu implements Menu {
     @Override
     public void printMenu() {
         System.out.println("---");
@@ -21,32 +21,32 @@ public class NumberMenu implements Menu{
 
     @Override
     public void run() {
-        UtilElements utilElements=new UtilElements();
-        while(true) {
-        printMenu();
-        int choice = in.nextInt();
-        switch (choice) {
-            case 1:
-                utilElements.getMax();
-                break;
-            case 2:
-                utilElements.getdMin();
-                break;
-            case 3:
-                utilElements.getLength();
-                break;
-            case 4:
-                utilElements.getFullSumm();
-                break;
-            case 5:
-                utilElements.getAverage();
-                break;
-            case 6:
-                return;
-            default:
-                System.out.println("такого пункта не существует");
-                break;
+        UtilElements utilElements = new UtilElements();
+        while (true) {
+            printMenu();
+            int choice = in.nextInt();
+            switch (choice) {
+                case 1:
+                    utilElements.getMax();
+                    break;
+                case 2:
+                    utilElements.getdMin();
+                    break;
+                case 3:
+                    utilElements.getLength();
+                    break;
+                case 4:
+                    utilElements.getFullSumm();
+                    break;
+                case 5:
+                    utilElements.getAverage();
+                    break;
+                case 6:
+                    return;
+                default:
+                    System.out.println("такого пункта не существует");
+                    break;
+            }
         }
-    }
     }
 }

@@ -8,8 +8,10 @@ import java.util.Scanner;
  * Created by Dzenyaa on 09.10.2017.
  */
 public interface Menu {
-   
+
     void printMenu();
-    public void run();
+
+    void run();
+
     Scanner in = Reader.getIn();
 }

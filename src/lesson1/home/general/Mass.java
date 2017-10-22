@@ -13,53 +13,48 @@ public class Mass {
     static private int[] mass;
 
 
-    public  static void createMass() {
-        while (true){
-        System.out.println("Введите размер массива:");
-        int razmer=Reader.getIn().nextInt();
-        if ((razmer>0) &&(razmer<11))
-        {
-            mass=new int[razmer];
-            return;
-        }
-        System.out.println("Введенный размер некоректен");
+    public static void createMass() {
+        while (true) {
+            System.out.println("Введите размер массива:");
+            int razmer = Reader.getIn().nextInt();
+            if ((razmer > 0) && (razmer < 11)) {
+                mass = new int[razmer];
+                return;
+            }
+            System.out.println("Введенный размер некоректен");
         }
 
     }
-    static boolean searchElemnt(int element)
-    {
-        for (int i=0;i<mass.length;i++)
-        {
-            if (element==mass[i])
-            {
+
+    static boolean searchElemnt(int element) {
+        for (int i = 0; i < mass.length; i++) {
+            if (element == mass[i]) {
 
                 return true;
             }
         }
         return false;
     }
-    static void fillMass()
-    {   System.out.println("Ведите значения:");
-        boolean haveZero=false;
-        for(int i=0;i < mass.length; i++){
 
-            int element=Reader.getIn().nextInt();
-            if ((element==0) &&(haveZero==false))
-            {
-                mass[i]=element;
-                haveZero=true;
-            } else
-            if ((searchElemnt(element)) )
-            {
+    static void fillMass() {
+        System.out.println("Ведите значения:");
+        boolean haveZero = false;
+        for (int i = 0; i < mass.length; i++) {
+
+            int element = Reader.getIn().nextInt();
+            if ((element == 0) && (haveZero == false)) {
+                mass[i] = element;
+                haveZero = true;
+            } else if ((searchElemnt(element))) {
                 System.out.println("Такое значение уже существует в массиве");
                 i--;
-            } else
-            {
-                mass[i]=element;
+            } else {
+                mass[i] = element;
             }
 
         }
     }
+
     public static int[] getMass() {
         return mass;
     }

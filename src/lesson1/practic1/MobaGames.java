@@ -10,13 +10,13 @@ public class MobaGames extends MmoGames implements ClearUltil {
 
     @Override
     public void clear() {
-        int a=getTimeInGame();
+        int a = getTimeInGame();
         setTimeInGame(-a);
     }
 
     @Override
     void play() {
-      setTimeInGame(48);
+        setTimeInGame(48);
         System.out.println("forgot 2 days");
     }
 }

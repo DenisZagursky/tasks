@@ -8,16 +8,16 @@ import lesson1.home.utils.UtilSearch;
 public class SearchMenu implements Menu {
     @Override
     public void printMenu() {
-            System.out.println("---");
-            System.out.println("1 Проверить входит ли число в массив");
-            System.out.println("2 Заменить элемент массива на другой");
-            System.out.println("3 Назад");
-            System.out.println("Выберите значение...");
+        System.out.println("---");
+        System.out.println("1 Проверить входит ли число в массив");
+        System.out.println("2 Заменить элемент массива на другой");
+        System.out.println("3 Назад");
+        System.out.println("Выберите значение...");
     }
 
     @Override
     public void run() {
-        UtilSearch utilSearch=new UtilSearch();
+        UtilSearch utilSearch = new UtilSearch();
         while (true) {
             printMenu();
             int choice = in.nextInt();

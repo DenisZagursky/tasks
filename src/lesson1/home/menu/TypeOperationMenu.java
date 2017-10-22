@@ -17,9 +17,9 @@ public class TypeOperationMenu implements Menu {
 
     @Override
     public void run() {
-        NumberMenu numberMenu=new NumberMenu();
-        SearchMenu searchMenu=new SearchMenu();
-        while(true) {
+        NumberMenu numberMenu = new NumberMenu();
+        SearchMenu searchMenu = new SearchMenu();
+        while (true) {
             printMenu();
             int choice = in.nextInt();
             switch (choice) {
